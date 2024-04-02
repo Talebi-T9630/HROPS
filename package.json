@@ -1,0 +1,14 @@
+{
+  "name": "hrops",
+  "version": "1.0.0",
+  "description": "HROPS tracking system",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tarane Talebi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
