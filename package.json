@@ -15,6 +15,9 @@
     "express-group-routes": "^1.1.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.9.3",
+    "sequelize": "^6.37.2"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.0"
   }
 }
