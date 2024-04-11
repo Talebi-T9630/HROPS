@@ -5,7 +5,7 @@ const  UsersController = {
 
       async getAllUsers(req, res) {
         const allUser = await UserModel.findAll();
-        res.send('All users fetched.')
+        res.send(allUser);
          
         },
 
@@ -20,9 +20,30 @@ const  UsersController = {
           // }
       },
       
-       createUser  (req, res) {
-        // Logic to create a new user in the database
-        res.send('Create a user');
+       async createUser  (req, res) {
+       let message='';
+
+        try{
+          const newUser= await UserModel.create(
+            {username: req.query.username,
+              user_email:req.query.user_email,
+              user_password:req.query.user_password,
+              user_status:req.query.user_status,
+              user_company_id:req.query.user_company_id,
+            }
+          )
+          message=`new user created : ${newUser}`;
+        }catch (error){
+          message=`error encrounted: ${error}`;
+
+        }
+       
+        res.send(message);
+        //TO DO:
+        //1- Do not activate user here and get email confirmation and activate status there
+        //2- Make password ecrypted
+        //3- check for unique email and username to not duplicate values
+        
       },
       
         updateUser  (req, res)  {

@@ -31,11 +31,11 @@ const UserModel = sequelize.define('user', {
         type: DataTypes.INTEGER,
         allowNull: true
     },
-    created_at: {
+    createdAt: {
         type: DataTypes.DATE,
         allowNull: false
     },
-    updated_at: {
+    updatedAt: {
         type: DataTypes.DATE,
         allowNull: true
     }
