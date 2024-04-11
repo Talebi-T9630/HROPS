@@ -2,13 +2,22 @@
   "name": "hrops",
   "version": "1.0.0",
   "description": "HROPS tracking system",
-  "main": "helloworld.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon server.js"
   },
   "author": "Tarane Talebi",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-group-routes": "^1.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.3",
+    "sequelize": "^6.37.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
